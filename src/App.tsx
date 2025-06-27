@@ -186,23 +186,25 @@ function App() {
       </div>
       <div className="flex-1">
         <ReactFlowProvider>
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            onConnect={onConnect}
-            onInit={setRfInstance}
-            nodeTypes={nodeTypes}
-            zoomOnScroll={true}
-            panOnScroll={true}
-            minZoom={0.2}
-            maxZoom={4}
-          >
-            <MiniMap />
-            <Controls />
-            <Background />
-          </ReactFlow>
+          <div className="reactflow-wrapper w-full h-full bg-gray-50 dark:bg-gray-900">
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              onInit={setRfInstance}
+              nodeTypes={nodeTypes}
+              zoomOnScroll={true}
+              panOnScroll={true}
+              minZoom={0.2}
+              maxZoom={4}
+            >
+              <MiniMap />
+              <Controls />
+              <Background />
+            </ReactFlow>
+          </div>
         </ReactFlowProvider>
       </div>
     </div>
